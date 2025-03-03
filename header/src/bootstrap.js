@@ -1,5 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Header from './Header';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Header from "./Header";
 
-ReactDOM.render(<Header />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Header />);

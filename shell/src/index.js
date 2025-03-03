@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom/client";
 
-const Header = React.lazy(() => import('header/Header'));
+const Header = React.lazy(() => import("header/Header"));
 
-const App = () => (
+const MainApp = () => ( 
   <div>
     <Suspense fallback={<div>Loading Header...</div>}>
       <Header />
@@ -12,4 +12,5 @@ const App = () => (
   </div>
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<MainApp />);

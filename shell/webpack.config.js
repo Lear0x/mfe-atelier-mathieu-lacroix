@@ -1,7 +1,7 @@
-import { ModuleFederationPlugin } from '@module-federation/enhanced/webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const { ModuleFederationPlugin } = require('@module-federation/enhanced/webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-export default {
+module.exports = {
   mode: 'development',
   devServer: {
     port: 8080,
@@ -27,8 +27,8 @@ export default {
         header: 'header@http://localhost:8081/remoteEntry.js',
       },
       shared: {
-        react: { singleton: true },
-        'react-dom': { singleton: true },
+        react: { singleton: true, requiredVersion: '^18.2.0', eager: true },
+        'react-dom': { singleton: true, requiredVersion: '^18.2.0', eager: true },
       },
     }),
     new HtmlWebpackPlugin({
