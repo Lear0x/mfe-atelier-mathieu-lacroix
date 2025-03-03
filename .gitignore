@@ -1,0 +1,37 @@
+# Ignorer les dossiers node_modules dans chaque projet
+shell/node_modules/
+header/node_modules/
+
+# Ignorer les fichiers de log
+shell/npm-debug.log*
+header/npm-debug.log*
+shell/yarn-debug.log*
+header/yarn-debug.log*
+shell/yarn-error.log*
+header/yarn-error.log*
+shell/package-lock.json
+header/package-lock.json
+
+# Ignorer les builds générées par Webpack
+shell/dist/
+header/dist/
+shell/build/
+header/build/
+shell/.cache/
+header/.cache/
+
+# Ignorer les logs générés
+shell/logs
+header/logs
+shell/*.log
+header/*.log
+
+# Ignorer les fichiers des IDE (VS Code, JetBrains, macOS, etc.)
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Ignorer Git lui-même (évite de commettre le dépôt dans le dépôt)
+.git/
